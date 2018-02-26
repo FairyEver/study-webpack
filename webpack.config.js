@@ -3,17 +3,14 @@ module.exports = {
         app: './app.js'
     },
     output: {
-        filename: '[name].[hash:5].js'
+        filename: '[name].js'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
+                    loader: 'babel-loader'
                 },
                 exclude: '/node_modules/'
             }
